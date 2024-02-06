@@ -80,9 +80,23 @@
     
 
 
+    <!-- http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/pav/hasVersion -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/pav/hasVersion"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#definition"/>
     
 
 
@@ -134,29 +148,57 @@
     
 
 
+    <!-- http://data.europa.eu/r5r/availability -->
+
+    <owl:ObjectProperty rdf:about="http://data.europa.eu/r5r/availability">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment>An indication how long it is planned to keep the Distribution of the Dataset available.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/ai4qc#anomaly -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#anomaly">
-        <rdfs:domain rdf:resource="http://purl.org/ai4qc#tds:AI_EOTrainingData"/>
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_EOTrainingData"/>
         <rdfs:range rdf:resource="http://purl.org/ai4qc#EO_anomaly"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#class -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#class"/>
+    
+
+
+    <!-- http://purl.org/ai4qc#classes -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#classes"/>
     
 
 
     <!-- http://purl.org/ai4qc#data -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#data">
-        <rdfs:domain rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingDataset"/>
-        <rdfs:range rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingData"/>
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_TrainingDataset"/>
+        <rdfs:range rdf:resource="http://purl.org/ai4qc#AI_TrainingData"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#geometry -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#geometry"/>
     
 
 
     <!-- http://purl.org/ai4qc#label -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#label">
-        <rdfs:domain rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingData"/>
-        <rdfs:range rdf:resource="http://purl.org/ai4qc#tds:AI_AbstractLabel"/>
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_TrainingData"/>
+        <rdfs:range rdf:resource="http://purl.org/ai4qc#AI_AbstractLabel"/>
     </owl:ObjectProperty>
     
 
@@ -164,8 +206,8 @@
     <!-- http://purl.org/ai4qc#labelers -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#labelers">
-        <rdfs:domain rdf:resource="http://purl.org/ai4qc#tds:AI_Labeling"/>
-        <rdfs:range rdf:resource="http://purl.org/ai4qc#tds:AI_Labeler"/>
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_Labeling"/>
+        <rdfs:range rdf:resource="http://purl.org/ai4qc#AI_Labeler"/>
     </owl:ObjectProperty>
     
 
@@ -173,8 +215,8 @@
     <!-- http://purl.org/ai4qc#labeling -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#labeling">
-        <rdfs:domain rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingDataset"/>
-        <rdfs:range rdf:resource="http://purl.org/ai4qc#tds:AI_Labeling"/>
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_TrainingDataset"/>
+        <rdfs:range rdf:resource="http://purl.org/ai4qc#AI_Labeling"/>
     </owl:ObjectProperty>
     
 
@@ -188,11 +230,23 @@
     
 
 
+    <!-- http://purl.org/ai4qc#metricsInLIT -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#metricsInLIT"/>
+    
+
+
+    <!-- http://purl.org/ai4qc#object -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#object"/>
+    
+
+
     <!-- http://purl.org/ai4qc#procedure -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#procedure">
-        <rdfs:domain rdf:resource="http://purl.org/ai4qc#tds:AI_Labeling"/>
-        <rdfs:range rdf:resource="http://purl.org/ai4qc#tds:AI_LabelingProcedure"/>
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_Labeling"/>
+        <rdfs:range rdf:resource="http://purl.org/ai4qc#AI_LabelingProcedure"/>
     </owl:ObjectProperty>
     
 
@@ -200,18 +254,24 @@
     <!-- http://purl.org/ai4qc#quality -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#quality">
-        <rdfs:domain rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingData"/>
-        <rdfs:domain rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingDataset"/>
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_TrainingData"/>
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_TrainingDataset"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#statisticsInfo -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#statisticsInfo"/>
     
 
 
     <!-- http://purl.org/ai4qc#task -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#task">
-        <rdfs:domain rdf:resource="http://purl.org/ai4qc#tds:AI_Task"/>
-        <rdfs:range rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingDataset"/>
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_Task"/>
+        <rdfs:range rdf:resource="http://purl.org/ai4qc#AI_TrainingDataset"/>
     </owl:ObjectProperty>
     
 
@@ -283,6 +343,25 @@
     <!-- http://purl.org/dc/terms/subject -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/subject"/>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#representationTechnique -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/adms#representationTechnique">
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#status -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/adms#status">
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment>The status of the Asset in the context of a particular workflow process.</rdfs:comment>
+    </owl:ObjectProperty>
     
 
 
@@ -366,6 +445,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#endpointDescription">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </owl:ObjectProperty>
     
 
@@ -510,6 +590,34 @@
     
 
 
+    <!-- http://www.w3.org/ns/odrl/2/hasPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/odrl/2/hasPolicy">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#used -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#used">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#wasUsedBy"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasUsedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasUsedBy">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://xmlns.com/foaf/0.1/homepage -->
 
     <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
@@ -533,9 +641,254 @@
     
 
 
+    <!-- http://purl.org/ai4qc#algorithm -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#algorithm">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#amountOfTrainingData -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#amountOfTrainingData">
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_TrainingDataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#area -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#area">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#bands -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#bands">
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_EOTrainingDataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>e.g., &quot;bands&quot;: &quot;red, green, blue&quot;</rdfs:comment>
+        <rdfs:definition>Description of the image bands used in the EO
+training dataset.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#bbox -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#bbox">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#bboxType -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#bboxType">
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_ObjectLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:definition>Type of the bbox.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#classificationSchema -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#classificationSchema">
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_TrainingDataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#confidance -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#confidance">
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_AbstractLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:definition>Confidence score of the labeler.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#dataSources -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#dataSources">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#datatime -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#datatime">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#doi -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#doi">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#extent -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#extent">
+        <rdfs:definition>Spatial extent of the EO training dataset.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#image_format -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#image_format">
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_PixelLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:definition>Image data format.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#image_size -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#image_size">
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_EOTrainingDataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#image_url -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#image_url">
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_PixelLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:definition>URL of the images representing the label
+information.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#isNegative -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#isNegative">
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_AbstractLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:definition>Whether the training sample related to the
+label is a positive or negative sample.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#iscrowd -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#iscrowd">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#methods -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#methods">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#numberOfClasses -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#numberOfClasses">
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_TrainingDataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#numberOfLabels -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#numberOfLabels">
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_TrainingData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:definition>Total number of labels in the individual AI
+training sample.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#scope -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#scope">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#taskType -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#taskType">
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#tools -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#tools">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#trainingType -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#trainingType">
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_TrainingData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>e.g., &quot;training&quot;</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/issued -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/issued">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#versionNotes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/adms#versionNotes">
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
@@ -610,9 +963,285 @@
     
 
 
+    <!-- http://purl.org/ai4qc#AI_AbstractLabel -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#AI_AbstractLabel">
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#AI_EOTask -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#AI_EOTask">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ai4qc#AI_Task"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#AI_EOTrainingData -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#AI_EOTrainingData">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ai4qc#AI_TrainingData"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#datatime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#extent"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#AI_EOTrainingDataset -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#AI_EOTrainingDataset">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ai4qc#AI_TrainingDataset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#extent"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#AI_Labeler -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#AI_Labeler">
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#AI_Labeling -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#AI_Labeling">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#scope"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#AI_LabelingProcedure -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#AI_LabelingProcedure">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#methods"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#tools"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#AI_MetricsInLiterature -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#AI_MetricsInLiterature">
+        <rdfs:comment>should have doi, algorithm and metrics as data properties</rdfs:comment>
+        <rdfs:definition>AI_MetricsInLiterature records results of performance metrics achieved
+by AI/ML algorithms in the peer-reviewed literature.</rdfs:definition>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#AI_ObjectLabel -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#AI_ObjectLabel">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ai4qc#AI_AbstractLabel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#class"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ai4qc#AI_class"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#object"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ai4qc#Feature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#bboxType"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#datatime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#AI_PixelLabel -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#AI_PixelLabel">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ai4qc#AI_AbstractLabel"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#AI_SceneLabel -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#AI_SceneLabel">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ai4qc#AI_AbstractLabel"/>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#AI_Task -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#AI_Task">
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#AI_TrainingData -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#AI_TrainingData">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#dataSources"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#AI_TrainingDataset -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#AI_TrainingDataset">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#classes"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ai4qc#AI_class"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#metricsInLIT"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ai4qc#metricInLIT"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#statisticsInfo"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ai4qc#Statistic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#dataSources"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#scope"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#AI_class -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#AI_class">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/ai4qc#EO_anomaly -->
 
     <owl:Class rdf:about="http://purl.org/ai4qc#EO_anomaly"/>
+    
+
+
+    <!-- http://purl.org/ai4qc#Feature -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#Feature">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#area"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#iscrowd"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#Polygon -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#Polygon">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#bbox"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#Statistic -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#Statistic">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -640,94 +1269,15 @@
     
 
 
-    <!-- http://purl.org/ai4qc#tds:AI_AbstractLabel -->
+    <!-- http://purl.org/ai4qc#metricInLIT -->
 
-    <owl:Class rdf:about="http://purl.org/ai4qc#tds:AI_AbstractLabel"/>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:AI_EOTask -->
-
-    <owl:Class rdf:about="http://purl.org/ai4qc#tds:AI_EOTask">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ai4qc#tds:AI_Task"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:AI_EOTrainingData -->
-
-    <owl:Class rdf:about="http://purl.org/ai4qc#tds:AI_EOTrainingData">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingData"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:AI_EOTrainingDataset -->
-
-    <owl:Class rdf:about="http://purl.org/ai4qc#tds:AI_EOTrainingDataset">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingDataset"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:AI_Labeler -->
-
-    <owl:Class rdf:about="http://purl.org/ai4qc#tds:AI_Labeler"/>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:AI_Labeling -->
-
-    <owl:Class rdf:about="http://purl.org/ai4qc#tds:AI_Labeling"/>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:AI_LabelingProcedure -->
-
-    <owl:Class rdf:about="http://purl.org/ai4qc#tds:AI_LabelingProcedure"/>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:AI_ObjectLabel -->
-
-    <owl:Class rdf:about="http://purl.org/ai4qc#tds:AI_ObjectLabel">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ai4qc#tds:AI_AbstractLabel"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:AI_PixelLabel -->
-
-    <owl:Class rdf:about="http://purl.org/ai4qc#tds:AI_PixelLabel">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ai4qc#tds:AI_AbstractLabel"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:AI_SceneLabel -->
-
-    <owl:Class rdf:about="http://purl.org/ai4qc#tds:AI_SceneLabel">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ai4qc#tds:AI_AbstractLabel"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:AI_Task -->
-
-    <owl:Class rdf:about="http://purl.org/ai4qc#tds:AI_Task"/>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:AI_TrainingData -->
-
-    <owl:Class rdf:about="http://purl.org/ai4qc#tds:AI_TrainingData"/>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:AI_TrainingDataset -->
-
-    <owl:Class rdf:about="http://purl.org/ai4qc#tds:AI_TrainingDataset">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <owl:Class rdf:about="http://purl.org/ai4qc#metricInLIT">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -759,6 +1309,12 @@
     <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
 
     <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
     
 
 
@@ -822,358 +1378,39 @@
 
     <!-- http://www.w3.org/ns/dqv#QualityMeasurement -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/dqv#QualityMeasurement"/>
+    <owl:Class rdf:about="http://www.w3.org/ns/dqv#QualityMeasurement">
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/Asset -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/odrl/2/Asset"/>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/Policy -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/odrl/2/Policy"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity"/>
     
 
 
     <!-- http://xmlns.com/foaf/0.1/Document -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://data.europa.eu/r5r/availability -->
-
-    <owl:NamedIndividual rdf:about="http://data.europa.eu/r5r/availability">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#aireo:classes -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#aireo:classes">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_ObjectLabel"/>
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_SceneLabel"/>
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingDataset"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#aireo:created -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#aireo:created">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#aireo:providers_name -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#aireo:providers_name">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#aireo:task -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#aireo:task">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_EOTask"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#aireo:updated -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#aireo:updated">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:amountOfTrainingData -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:amountOfTrainingData">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingDataset"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:bands -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:bands">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_EOTrainingDataset"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:bboxType -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:bboxType">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_ObjectLabel"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:classificationScheme -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:classificationScheme">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingDataset"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:confidence -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:confidence">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_AbstractLabel"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:dataSources -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:dataSources">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingData"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:dataTime -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:dataTime">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_EOTrainingData"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:dataURL -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:dataURL">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_EOTrainingData"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:datasetId -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:datasetId">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_Task"/>
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingData"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:dateTime -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:dateTime">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_ObjectLabel"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:extent -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:extent">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_EOTrainingData"/>
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_EOTrainingDataset"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:imageFormat -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:imageFormat">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_PixelLabel"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:imageSize -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:imageSize">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_EOTrainingDataset"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:imageURL -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:imageURL">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_PixelLabel"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:isNegative -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:isNegative">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_AbstractLabel"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:methods -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:methods">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_LabelingProcedure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:metricsInLIT -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:metricsInLIT">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:numberOfClasses -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:numberOfClasses">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingDataset"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:numberOfLabels -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:numberOfLabels">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingData"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:object -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:object">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_ObjectLabel"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:scope -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:scope">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_Labeling"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:statisticsInfo -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:statisticsInfo">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:tools -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:tools">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_LabelingProcedure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/ai4qc#tds:trainingType -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/ai4qc#tds:trainingType">
-        <rdf:type rdf:resource="http://purl.org/ai4qc#tds:AI_TrainingData"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/dc/terms/type -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/type">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://spdx.org/rdf/termschecksum -->
-
-    <owl:NamedIndividual rdf:about="http://spdx.org/rdf/termschecksum">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3.org/ns/adms#representationTechnique -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/adms#representationTechnique">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3.org/ns/adms#status -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/adms#status">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3.org/ns/adms#versionNotes -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/adms#versionNotes">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3.org/ns/dcat#qualifiedRelation -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/dcat#qualifiedRelation">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3.org/ns/odrl/2/hasPolicy -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/odrl/2/hasPolicy">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#qualifiedAttribution -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/prov#qualifiedAttribution">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#wasUsedBy -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/prov#wasUsedBy">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
-    </owl:NamedIndividual>
 </rdf:RDF>
 
 
