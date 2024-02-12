@@ -161,9 +161,22 @@
     <!-- http://purl.org/ai4qc#anomaly -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#anomaly">
-        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_EOTrainingData"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ai4qc#AI_EOTrainingData"/>
+                    <rdf:Description rdf:about="http://purl.org/ai4qc#AI_EOTrainingDataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.org/ai4qc#EO_anomaly"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#bands -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#bands"/>
     
 
 
@@ -194,6 +207,16 @@
     
 
 
+    <!-- http://purl.org/ai4qc#has_task -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#has_task">
+        <owl:inverseOf rdf:resource="http://purl.org/ai4qc#task"/>
+        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_TrainingDataset"/>
+        <rdfs:range rdf:resource="http://purl.org/ai4qc#AI_Task"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/ai4qc#label -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#label">
@@ -221,12 +244,26 @@
     
 
 
+    <!-- http://purl.org/ai4qc#methods -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#methods">
+        <rdfs:range rdf:resource="http://purl.org/ai4qc#Labeling_method"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/ai4qc#metric -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#metric">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ai4qc#metrics -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#metrics"/>
     
 
 
@@ -409,7 +446,9 @@
 
     <!-- http://www.w3.org/ns/dcat#contactPoint -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#contactPoint"/>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#contactPoint">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    </owl:ObjectProperty>
     
 
 
@@ -577,6 +616,7 @@
     <!-- http://www.w3.org/ns/dqv#inDimension -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dqv#inDimension">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
     </owl:ObjectProperty>
     
@@ -664,19 +704,6 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#area">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/ai4qc#bands -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#bands">
-        <rdfs:domain rdf:resource="http://purl.org/ai4qc#AI_EOTrainingDataset"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>e.g., &quot;bands&quot;: &quot;red, green, blue&quot;</rdfs:comment>
-        <rdfs:definition>Description of the image bands used in the EO
-training dataset.</rdfs:definition>
-        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -806,15 +833,6 @@ label is a positive or negative sample.</rdfs:definition>
 
     <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#iscrowd">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/ai4qc#methods -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#methods">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -1007,6 +1025,12 @@ training sample.</rdfs:definition>
         <rdfs:subClassOf rdf:resource="http://purl.org/ai4qc#AI_TrainingDataset"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#bands"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ai4qc#Band"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/ai4qc#extent"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -1044,7 +1068,7 @@ training sample.</rdfs:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/ai4qc#methods"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ai4qc#Labeling_method"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1061,6 +1085,18 @@ training sample.</rdfs:definition>
     <!-- http://purl.org/ai4qc#AI_MetricsInLiterature -->
 
     <owl:Class rdf:about="http://purl.org/ai4qc#AI_MetricsInLiterature">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#metrics"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ai4qc#LiteratureMetric"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#algorithm"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>should have doi, algorithm and metrics as data properties</rdfs:comment>
         <rdfs:definition>AI_MetricsInLiterature records results of performance metrics achieved
 by AI/ML algorithms in the peer-reviewed literature.</rdfs:definition>
@@ -1148,14 +1184,14 @@ by AI/ML algorithms in the peer-reviewed literature.</rdfs:definition>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/ai4qc#classes"/>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#class"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/ai4qc#AI_class"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/ai4qc#metricsInLIT"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/ai4qc#metricInLIT"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ai4qc#AI_MetricsInLiterature"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1194,6 +1230,19 @@ by AI/ML algorithms in the peer-reviewed literature.</rdfs:definition>
     
 
 
+    <!-- http://purl.org/ai4qc#Band -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#Band">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/ai4qc#EO_anomaly -->
 
     <owl:Class rdf:about="http://purl.org/ai4qc#EO_anomaly"/>
@@ -1213,6 +1262,25 @@ by AI/ML algorithms in the peer-reviewed literature.</rdfs:definition>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/ai4qc#iscrowd"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#Labeling_method -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#Labeling_method"/>
+    
+
+
+    <!-- http://purl.org/ai4qc#LiteratureMetric -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#LiteratureMetric">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1265,19 +1333,6 @@ by AI/ML algorithms in the peer-reviewed literature.</rdfs:definition>
 
     <owl:Class rdf:about="http://purl.org/ai4qc#gosting_anomaly">
         <rdfs:subClassOf rdf:resource="http://purl.org/ai4qc#EO_anomaly"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/ai4qc#metricInLIT -->
-
-    <owl:Class rdf:about="http://purl.org/ai4qc#metricInLIT">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#value"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1372,13 +1427,26 @@ by AI/ML algorithms in the peer-reviewed literature.</rdfs:definition>
 
     <!-- http://www.w3.org/ns/dqv#Metric -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/dqv#Metric"/>
+    <owl:Class rdf:about="http://www.w3.org/ns/dqv#Metric">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
     <!-- http://www.w3.org/ns/dqv#QualityMeasurement -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/dqv#QualityMeasurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#isMeasurementOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment></rdfs:comment>
     </owl:Class>
     
