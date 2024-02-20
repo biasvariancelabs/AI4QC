@@ -1,0 +1,431 @@
+{
+    "dcatCatalog":{
+        "type": "dcat:Catalog",
+        "identifier": "ai4fc_catalog",
+        "title":"catalog of anomaly datasets",
+        "modified":"2024-02-13",
+        "issued":"2024-02-13",
+        "description":"The catalog contains a set of datasets for anomaly detection. One dataset contains one anomaly type.",
+        "theme": {
+            "type": "Resource",
+            "value": "Anomaly detection"
+        },
+        "homepage": {
+            "type": "Document",
+            "value": "add catalog homepage"
+        },
+        "language": {
+            "type": "dcterms:LinguisticSystem",
+            "value": "English"
+        },
+        "rights": {
+            "type": "dcterms:RightsStatement",
+            "value": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited. The material cannot be used for commercial purposes."
+        },
+        "dataset":[
+            {
+                "type": "tds:AI_EOTrainingDataset",
+                "identifier":"cloudsen12",
+                "title": "CloudSEN12 dataset",
+                "description":"Mutli-temporal global dataset created to foster research in cloud and cloud shadow detection. The dataset contains three type of annotaions: high-quality (2000 ROI), scribble (2000 ROI) and no-annotation (5880 ROI). Each ROI contains 5 patches with different cloud covers: clear (0%), low-cloudy (1% - 25%), almost clear (25% - 45%), mid-cloudy (45% - 65%), cloudy (65% >).",
+                "created":"2022-11-28",
+                "modified":"2023-05-18",
+                "has-task":{
+                    "type": "AI_EOTask",
+                    "identifier":"semantic segmentation",
+                    "description":"Semantic segmentation with a class assigned to each pixel.",
+                    "taskType":"semantic segmentation"
+                },
+                "amountOfTrainingData": "49400",
+                "numberOfClasses":"4",
+                "version":"V1",
+                "license":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                "keyword":["sentinel-2","cloud detection"],
+                "creator":["ESA", "Z_GIS (Salzburg, Austria)", "FIGMMG (Lima, Peru)", "the ISP (Valencia, Spain)", "the aiPUCP (Lima, Peru)."],
+                "publisher":["Z_GIS (Salzburg, Austria)", "FIGMMG (Lima, Peru)", "the ISP (Valencia, Spain)",  "the aiPUCP (Lima, Peru)"],
+                "dataSources":"Sentinel-2",
+                "scope":"Cloud masks globally distributed and to be used for training of a ML model for automatic detection of clouds.",
+                "imageSize":"509 x 509",
+                "has_class": [
+                    {
+                        "type": "AI_class",
+                        "label": "clear",
+                        "identifier": 0
+                    },
+                    {
+                        "type": "AI_class",
+                        "label": "thick cloud",
+                        "identifier": 1
+                    },
+                    {
+                        "type": "AI_class",
+                        "label": "thin cloud",
+                        "identifier": 2
+                    },
+                    {
+                        "type": "AI_class",
+                        "label": "cloud shadow",
+                        "identifier": 3
+                    }
+                ],
+                "statisticsInfo": [
+                    {
+                        "type": "Statistic",
+                        "label": "number of image patches",
+                        "value": "49400"
+                    }
+                ],
+                "metricsInLIT": [
+                    {
+                        "type": "AI_MetricsInLIT",
+                        "identifier": "doi.org/10.1038/s41597-022-01878-2",
+                        "algorithm": "UNetMobV2",
+                        "literature_metric": [
+                            {
+                                "type": "LiteratureMetric",
+                                "label": "balanced overall accuracy (BOA)",
+                                "value": "0.92"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "AI_MetricsInLIT",
+                        "identifier": "doi.org/10.1038/s41597-022-01878-2",
+                        "algorithm": "KappaMask L2A",
+                        "literature_metric": [
+                            {
+                                "type": "LiteratureMetric",
+                                "label": "balanced overall accuracy (BOA)",
+                                "value": "0.77"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "AI_MetricsInLIT",
+                        "identifier": "doi.org/10.1038/s41597-022-01878-2",
+                        "algorithm": "KappaMask L1C",
+                        "literature_metric": [
+                            {
+                                "type": "LiteratureMetric",
+                                "label": "balanced overall accuracy (BOA)",
+                                "value": "0.82"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "AI_MetricsInLIT",
+                        "identifier": "doi.org/10.1038/s41597-022-01878-2",
+                        "algorithm": "FMask",
+                        "literature_metric": [
+                            {
+                                "type": "LiteratureMetric",
+                                "label": "balanced overall accuracy (BOA)",
+                                "value": "0.84"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "AI_MetricsInLIT",
+                        "identifier": "doi.org/10.1038/s41597-022-01878-2",
+                        "algorithm": "s2cloudless",
+                        "literature_metric": [
+                            {
+                                "type": "LiteratureMetric",
+                                "label": "balanced overall accuracy (BOA)",
+                                "value": "0.79"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "AI_MetricsInLIT",
+                        "identifier": "doi.org/10.1038/s41597-022-01878-2",
+                        "algorithm": "Sen2Cor",
+                        "literature_metric": [
+                            {
+                                "type": "LiteratureMetric",
+                                "label": "balanced overall accuracy (BOA)",
+                                "value": "0.71"
+                            }
+                        ]
+                    }
+
+                ],
+                "band":[
+                    {
+                        "type": "Band",
+                        "label": "B1",
+                        "value": "443.9nm (S2A)/442.3nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B2",
+                        "value": "496.6nm (S2A)/492.1nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B3",
+                        "value": "560nm (S2A)/559nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B4",
+                        "value": "664.5nm (S2A)/665nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B5",
+                        "value": "703.9nm (S2A)/703.8nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B6",
+                        "value": "740.2nm (S2A)/739.1nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B7",
+                        "value": "782.5nm (S2A)/779.7nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B8",
+                        "value": "835.1nm (S2A)/833nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B8A",
+                        "value": "864.8nm (S2A)/864nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B9",
+                        "value": "945nm (S2A)/943.2nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B10",
+                        "value": "1373.5nm (S2A)/1376.9nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B11",
+                        "value": "1613.7nm (S2A)/1610.4nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B12",
+                        "value": "2202.4nm (S2A)/2185.7nm (S2B)"
+                    }
+                ],
+                "labeling": {
+                    "type": "AI_Labeling",
+                    "identifier":"cloudsen12-labeling",
+                    "labeler":[
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"cloudsen12-labeler_1",
+                            "name":"Jhomira Loja"
+                        },
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"cloudsen12-labeler_3",
+                            "name":"Fernando Herrera"
+                        },
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"cloudsen12-labeler_4",
+                            "name":"Wendy Espinoza"
+                        },
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"cloudsen12-labeler_5",
+                            "name":"Roy Yali"
+                        },
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"cloudsen12-labeler_6",
+                            "name":"Karen Gonzales"
+                        },
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"cloudsen12-labeler_7",
+                            "name":"Luis Ysuhuaylas"
+                        },
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"cloudsen12-labeler_8",
+                            "name":"Lissette Diaz"
+                        },
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"cloudsen12-labeler_9",
+                            "name":"Angie Flores"
+                        },
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"cloudsen12-labeler_10",
+                            "name":"Nicole Cuenca"
+                        },
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"cloudsen12-labeler_11",
+                            "name":"Lesly Bautista"
+                        }
+                    ],
+                    "procedure":{
+                        "identifier":"cloudsen12-labeling-procedure",
+                        "type": "AI_LabelingProcedure",
+                        "tools":"Intelligence foR Image Segmentation (IRIS) active learning software",
+                        "scope":"Labeling of all pixels with one of the four classes the full scene is classified.",
+                        "method": [
+                            {
+                                "type": "Labeling_method",
+                                "label": "High-quality labels",
+                                "definition": "Human photo-interpretation and use of IRIS with machine learning assistance."
+                            },
+                            {
+                                "type": "Labeling_method",
+                                "label": "Scribble labels",
+                                "definition": "Use of IRIS without machine learning assistance"
+                            },
+                            {
+                                "type": "Labeling_method",
+                                "label": "No-annotation",
+                                "definition": "Manual annotation only in the clear image patch."
+                            }
+                        ]
+                    }
+                },
+                "distribution": {
+                    "type": "dcat:Distribution",
+                    "identifier":"cloudsen12-distribution",
+                    "description": "The dataset is distributed as 496 files in a tape archive file format (tar). Inside the archive each file is a GeoTIFF raster file.",
+                    "issued":"2022-11-28",
+                    "modified":"2023-05-18",
+                    "title":"cloudsen12 distribution",
+                    "byteSize": "857098.24",
+                    "spatialResolutionInMeters":"10",
+                    "language": {
+                        "type": "dcterms:LinguisticSystem",
+                        "value": "English"
+                    },
+                    "rights": {
+                        "type": "dcterms:RightsStatement",
+                        "value": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited. The material cannot be used for commercial purposes."
+                    },
+                    "accessURL": {
+                        "type": "Resource",
+                        "value": "https://cloudsen12.github.io/"
+                    },
+                    "availability": {
+                        "type": "Concept",
+                        "value": "available"
+                    },
+                    "format": {
+                        "type": "Concept",
+                        "value": "tar"
+                    },
+                    "status": {
+                        "type": "Concept",
+                        "value":  "completed"
+                    },
+                    "compressFormat": {
+                        "type": "MediaType",
+                        "value": "LZW"
+                    },
+                    "downloadURL": {
+                        "type": "Resource",
+                        "value": "https://www.scidb.cn/en/detail?dataSetId=f72d622ff4ea4fa18070456a98222b1a"
+                    },
+                    "mediaType":{
+                        "type": "MediaType",
+                        "value": "image/tiff"
+                    },
+                    "packageFormat":{
+                        "type": "MediaType",
+                        "value": "application/x-tar"
+                    },
+                    "conformsTo":{
+                        "type": "Standard",
+                        "value": "WGS 84"
+                    },
+                    "page":{
+                        "type": "Document",
+                        "value": "https://www.scidb.cn/en/detail?dataSetId=f72d622ff4ea4fa18070456a98222b1a"
+                    },
+                    "hasPolicy":{
+                        "type":"Policy",
+                        "value": "You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. You may not use the material for commercial purposes. If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits."
+                    },
+                    "representationTechnique":{
+                        "type": "Concept",
+                        "value": "GeoTIFF"
+                    },
+                    "accessService": [
+                        {
+                            "type": "dcat:DataService",
+                            "identifier":"cloudsen12-data-service",
+                            "title":"cloudsen12 data service",
+                            "version":"V1",
+                            "description": "The Data Service class provides a collection of operations that give access to the CloudSEN12 dataset.",
+                            "license":"https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                            "created": "2022-11-28",
+                            "keyword":["sentinel-2", "cloud detection"],
+                            "creator":["ESA", "Z_GIS (Salzburg, Austria)", "FIGMMG (Lima, Peru)", "the ISP (Valencia, Spain)", "the aiPUCP (Lima, Peru)"],
+                            "endpointURL":{
+                                "type": "Resource",
+                                "value": "https://www.scidb.cn/en/detail?dataSetId=f72d622ff4ea4fa18070456a98222b1a"
+                            },
+                            "endpointDescription":{
+                                "type": "Resource",
+                                "value": "The dataset can be downloaded partly or totally via the end-point."
+                            },
+                            "contactPoint": {
+                                "type": "Individual",
+                                "value": "Cesar Aybar, csaybar@gmail.com"
+                            },
+                            "landingPage":{
+                                "type": "Document",
+                                "value": "https://www.scidb.cn/en"
+                            },
+                            "theme": {
+                                "type": "Resource",
+                                "value": "Deep learning"
+                            },
+                            "isReferencedBy": {
+                                "type": "Resource",
+                                "value": "https://www.nature.com/articles/s41597-022-01878-2"
+                            },
+                            "accessRights":{
+                                "type": "RightsStatement",
+                                "value": "open"
+                            },
+                            "format": {
+                                "type": "Concept",
+                                "value": "tar"
+                            },
+                            "wasUsedBy":{
+                                "type": "Activity",
+                                "value": "CloudSEN12"
+                            },
+                            "subject": [
+                                {
+                                    "type": "Resource",
+                                    "value": "Deep learning"
+                                },
+                                {
+                                    "type": "Resource",
+                                    "value": "Earth observation"
+                                },
+                                {
+                                    "type": "Resource",
+                                    "value": "cloud understanding"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
