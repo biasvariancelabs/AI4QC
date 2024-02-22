@@ -776,7 +776,7 @@
                                 "value": "The dataset can be downloaded via the end-point."
                             },
                             "contactPoint": {
-                                "type": "Individual", //if it is organization use type Organization
+                                "type": "Individual", 
                                 "value": "Olivier Hagolle, olivier.hagolle@cesbio.cnes.fr"
                             },
                             "landingPage":{
@@ -1590,7 +1590,7 @@
                                 "value": "The dataset can be downloaded via the end-point."
                             },
                             "contactPoint": {
-                                "type": "Individual", //if it is organization use type Organization
+                                "type": "Individual", 
                                 "value": "André Hollstein, andre.hollstein@gfz-potsdam.de"
                             },
                             "landingPage":{
