@@ -335,7 +335,7 @@
                     },
                     "downloadURL": {
                         "type": "Resource",
-                        "value": "https://www.scidb.cn/en/detail?dataSetId=f72d622ff4ea4fa18070456a98222b1a"
+                        "value": ["https://www.scidb.cn/en/detail?dataSetId=f72d622ff4ea4fa18070456a98222b1a","https://drive.google.com/drive/folders/1Hbn6ryyTgnyR6ZkCXDlZFUza5d6ot7cB?usp=sharing"]
                     },
                     "mediaType":[{
                         "type": "MediaType",
