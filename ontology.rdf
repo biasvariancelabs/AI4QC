@@ -33,6 +33,12 @@
     
 
 
+    <!-- http://purl.org/ai4qc#licenseLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ai4qc#licenseLabel"/>
+    
+
+
     <!-- http://purl.org/ai4qc#name -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/ai4qc#name"/>
@@ -289,6 +295,15 @@
     <!-- http://purl.org/ai4qc#object -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#object"/>
+    
+
+
+    <!-- http://purl.org/ai4qc#originates_from -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ai4qc#originates_from">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    </owl:ObjectProperty>
     
 
 
