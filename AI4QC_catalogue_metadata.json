@@ -460,6 +460,23 @@
                 "dataSources":"Sentinel-2",
                 "scope":"Cloud masks globally distributed and for the year 2017-2018. The data is to be used for training of a ML model for automatic detection of clouds.",
                 "imageSize":"1830 x 1830",
+                "band":[
+                    {
+                        "type": "Band",
+                        "label": "B2",
+                        "value": "496.6nm"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B3",
+                        "value": "560nm"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B4",
+                        "value": "664.5nm"
+                    }
+                ],
                 "has_class": [
                     {
                         "type": "AI_class",
@@ -885,6 +902,23 @@
                         "type": "AI_class",
                         "label": "shadow",
                         "identifier": 4
+                    }
+                ],
+                "band":[
+                    {
+                        "type": "Band",
+                        "label": "B2",
+                        "value": "496.6nm"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B3",
+                        "value": "560nm"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B4",
+                        "value": "664.5nm"
                     }
                 ],
                 "statisticsInfo": [
