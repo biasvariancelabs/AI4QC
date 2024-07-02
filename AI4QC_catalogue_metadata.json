@@ -3070,18 +3070,68 @@
                 "band":[
                     {
                         "type": "Band",
+                        "label": "B1",
+                        "value": "443.9nm (S2A)/442.3nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
                         "label": "B2",
-                        "value": "496.6nm"
+                        "value": "496.6nm (S2A)/492.1nm (S2B)"
                     },
                     {
                         "type": "Band",
                         "label": "B3",
-                        "value": "560nm"
+                        "value": "560nm (S2A)/559nm (S2B)"
                     },
                     {
                         "type": "Band",
                         "label": "B4",
-                        "value": "664.5nm"
+                        "value": "664.5nm (S2A)/665nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B5",
+                        "value": "703.9nm (S2A)/703.8nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B6",
+                        "value": "740.2nm (S2A)/739.1nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B7",
+                        "value": "782.5nm (S2A)/779.7nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B8",
+                        "value": "835.1nm (S2A)/833nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B8A",
+                        "value": "864.8nm (S2A)/864nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B9",
+                        "value": "945nm (S2A)/943.2nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B10",
+                        "value": "1373.5nm (S2A)/1376.9nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B11",
+                        "value": "1613.7nm (S2A)/1610.4nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B12",
+                        "value": "2202.4nm (S2A)/2185.7nm (S2B)"
                     }
                 ],
                 "labeling": {
@@ -3287,18 +3337,68 @@
                 "band":[
                     {
                         "type": "Band",
+                        "label": "B1",
+                        "value": "443.9nm (S2A)/442.3nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
                         "label": "B2",
-                        "value": "496.6nm"
+                        "value": "496.6nm (S2A)/492.1nm (S2B)"
                     },
                     {
                         "type": "Band",
                         "label": "B3",
-                        "value": "560nm"
+                        "value": "560nm (S2A)/559nm (S2B)"
                     },
                     {
                         "type": "Band",
                         "label": "B4",
-                        "value": "664.5nm"
+                        "value": "664.5nm (S2A)/665nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B5",
+                        "value": "703.9nm (S2A)/703.8nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B6",
+                        "value": "740.2nm (S2A)/739.1nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B7",
+                        "value": "782.5nm (S2A)/779.7nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B8",
+                        "value": "835.1nm (S2A)/833nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B8A",
+                        "value": "864.8nm (S2A)/864nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B9",
+                        "value": "945nm (S2A)/943.2nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B10",
+                        "value": "1373.5nm (S2A)/1376.9nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B11",
+                        "value": "1613.7nm (S2A)/1610.4nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B12",
+                        "value": "2202.4nm (S2A)/2185.7nm (S2B)"
                     }
                 ],
                 "labeling": {
@@ -3515,18 +3615,68 @@
                 "band":[
                     {
                         "type": "Band",
+                        "label": "B1",
+                        "value": "443.9nm (S2A)/442.3nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
                         "label": "B2",
-                        "value": "496.6nm"
+                        "value": "496.6nm (S2A)/492.1nm (S2B)"
                     },
                     {
                         "type": "Band",
                         "label": "B3",
-                        "value": "560nm"
+                        "value": "560nm (S2A)/559nm (S2B)"
                     },
                     {
                         "type": "Band",
                         "label": "B4",
-                        "value": "664.5nm"
+                        "value": "664.5nm (S2A)/665nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B5",
+                        "value": "703.9nm (S2A)/703.8nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B6",
+                        "value": "740.2nm (S2A)/739.1nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B7",
+                        "value": "782.5nm (S2A)/779.7nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B8",
+                        "value": "835.1nm (S2A)/833nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B8A",
+                        "value": "864.8nm (S2A)/864nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B9",
+                        "value": "945nm (S2A)/943.2nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B10",
+                        "value": "1373.5nm (S2A)/1376.9nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B11",
+                        "value": "1613.7nm (S2A)/1610.4nm (S2B)"
+                    },
+                    {
+                        "type": "Band",
+                        "label": "B12",
+                        "value": "2202.4nm (S2A)/2185.7nm (S2B)"
                     }
                 ],
                 "labeling": {
