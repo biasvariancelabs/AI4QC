@@ -3,7 +3,7 @@
         "type": "dcat:Catalog",
         "identifier": "ai4qc_catalog",
         "title":"catalog of anomaly datasets",
-        "modified":"2024-04-22",
+        "modified":"2024-02-13",
         "issued":"2024-02-13",
         "description":"The catalog contains a set of datasets for anomaly detection. One dataset contains one anomaly type.",
         "theme": {
@@ -11,8 +11,8 @@
             "value": "Anomaly detection"
         },
         "homepage": {
-            "type": "Document",
-            "value": "add catalog homepage"
+            "type": "Resource",
+            "value": "https://purl.org/ai4qc"
         },
         "language": {
             "type": "LinguisticSystem",
