@@ -3571,8 +3571,8 @@
                 "amountOfTrainingData": "58",
                 "numberOfClasses":"4",
                 "version":"V4",
-                "license":"https://creativecommons.org/licenses/by-nc/4.0/",
-                "licenseLabel": "CC BY-NC 4.0",
+                "license":"https://creativecommons.org/licenses/by/4.0/",
+                "licenseLabel": "CC BY 4.0",
                 "keyword":["sentinel-2","cloud detection","machine learning"],
                 "creator":["ESA", "GFZ German Research Centre for Geosciences"],
                 "publisher":["GFZ German Research Centre for Geosciences"],
@@ -3716,7 +3716,7 @@
                     },
                     "rights": {
                         "type": "RightsStatement",
-                        "value": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited. The material cannot be used for commercial purposes."
+                        "value": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited."
                     },
                     "accessURL": {
                         "type": "Resource",
@@ -3744,7 +3744,7 @@
                     },
                     "hasPolicy":{
                         "type":"Policy",
-                        "value": "You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. You may not use the material for commercial purposes. If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits."
+                        "value": "You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits."
                     },
                     "representationTechnique":[{
                         "type": "Concept",
@@ -3757,8 +3757,8 @@
                             "title":"hollstein-ai4qc data service",
                             "version":"V1",
                             "description": "The Data Service class provides a collection of operations that give access to the Hollstein-AI4QC dataset.",
-                            "license":"https://creativecommons.org/licenses/by-nc/4.0/",
-                            "licenseLabel": "CC BY-NC 4.0",
+                            "license":"https://creativecommons.org/licenses/by/4.0/",
+                            "licenseLabel": "CC BY 4.0",
                             "created": "2024-03-20",
                             "keyword":["sentinel-2", "cloud detection", "machine learning"],
                             "creator": ["GFZ German Research Centre for Geosciences"],
