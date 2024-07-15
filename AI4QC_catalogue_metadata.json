@@ -4418,6 +4418,230 @@
                     ]
                 }
 
+            },
+            {
+                "type": "tds:AI_EOTrainingDataset",
+                "identifier":"rfi",
+                "title": "RFI dataset",
+                "description":"This dataset contains a set of labeled RFIs (radio frequency interferences). These interferences are caused by man-made sources and can lead to an artefact in the satellite image, typically a bright rectangular pattern. Bounding boxes were defined around RFI artefacts in Sentinel-1 quick-looks (png images). This dataset can be used to train object detection algorithms to automatically detect these RFIs in a satellite image.",
+                "created":"2024-07-01",
+                "modified":"2024-07-01",
+                "anomaly": {
+                    "type": "rfi_anomaly",
+                    "rdfs:label": "rfi-anomaly"
+                },
+                "has-task":{
+                    "type": "AI_EOTask",
+                    "identifier":"object detection",
+                    "description":"Object detection with a bounding box around the RFI.",
+                    "taskType":"object detection"
+                },
+                "amountOfTrainingData": "3940",
+                "numberOfClasses":"2",
+                "version":"V1",
+                "license":"https://creativecommons.org/licenses/by/4.0/",
+                "licenseLabel": "CC BY 4.0",
+                "keyword":["sentinel-1","object detection", "rfi"],
+                "creator":["BVLabs"],
+                "publisher":["BVLabs"],
+                "dataSources":"Sentinel-1",
+                "scope":"Bounding boxes around RFIs to be used for training of a ML model for automatic detection of RFIs.",
+                "imageSize":"Varying",   
+                "has_class": [
+                    {
+                        "type": "AI_class",
+                        "label": "RFI",
+                        "identifier": 0
+                    },
+                    {
+                        "type": "AI_class",
+                        "label": "Other Anomaly",
+                        "identifier": 1
+                    }
+                ],
+                "statisticsInfo": [
+                    {
+                        "type": "Statistic",
+                        "label": "number of image patches",
+                        "value": "3940"
+                    },
+                    {
+                        "type": "Statistic",
+                        "label": "number of RFIs",
+                        "value": "11724"
+                    },
+                    {
+                        "type": "Statistic",
+                        "label": "number of other anomalies",
+                        "value": "301"
+                    }
+                ],
+                "labeling": {
+                    "type": "AI_Labeling",
+                    "identifier":"rfi-labeling",
+                    "labeler":[
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"rfi-labeler_1",
+                            "name":"Alvarez R."
+                        },
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"rfi-labeler_2",
+                            "name":"Clifton H."
+                        },
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"rfi-labeler_3",
+                            "name":"Cervino A."
+                        },
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"rfi-labeler_4",
+                            "name":"Duran M."
+                        }
+                    ],
+                    "procedure":{
+                        "identifier":"rfi-labeling-procedure",
+                        "type": "AI_LabelingProcedure",
+                        "tools":["Open Source Data Labeling - Label Studio"],
+                        "scope":"Labeling of RFIs and other anomalies through the definition of bounding boxes.",
+                        "method": [
+                            {
+                                "type": "Labeling_method",
+                                "label": "labels",
+                                "definition": "The bounding boxes labels were created using Label Studio."
+                            }
+                        ]
+                    }
+                },
+                "distribution": {
+                    "type": "dcat:Distribution",
+                    "identifier":"rfi-distribution",
+                    "description": "The dataset is distributed as a set of PNG images (the S1 quick-looks) and a set of labels (bounding boxes). Three formats are available for the labels: PASCAL VOC (xml files), COCO (json files) and YOLO (txt files).",
+                    "issued":"2024-07-09",
+                    "modified":"2024-07-09",
+                    "title":"rfi distribution",
+                    "byteSize": "905969664",
+                    "language": {
+                        "type": "LinguisticSystem",
+                        "value": "English"
+                    },
+                    "rights": {
+                        "type": "RightsStatement",
+                        "value": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited."
+                    },
+                    "accessURL": {
+                        "type": "Resource",
+                        "value": "https://zenodo.org/records/12698384"
+                    },
+                    "availability": {
+                        "type": "Concept",
+                        "value": "available"
+                    },
+                    "format": {
+                        "type": "Concept",
+                        "value": "zip"
+                    },
+                    "status": {
+                        "type": "Concept",
+                        "value": "completed"
+                    },
+                    "downloadURL": {
+                        "type": "Resource",
+                        "value": "https://zenodo.org/records/12698384"
+                    },
+                    "mediaType":[
+                        {
+                            "type": "MediaType",
+                            "value": "image/png"
+                        },
+                        {
+                            "type": "MediaType",
+                            "value": "text/xml"
+                        },
+                        {
+                            "type": "MediaType",
+                            "value": "application/json"
+                        },
+                        {
+                            "type": "MediaType",
+                            "value": "text/plain"
+                        }
+                    ],
+                    "packageFormat":{
+                        "type": "MediaType",
+                        "value": "application/zip"
+                    },
+                    "page":{
+                        "type": "Document",
+                        "value": "https://zenodo.org/records/12698384"
+                    },
+                    "hasPolicy":{
+                        "type":"Policy",
+                        "value": "You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits."
+                    },
+                    "accessService": [
+                        {
+                            "type": "dcat:DataService",
+                            "identifier":"rfi-data-service",
+                            "title":"rfi data service",
+                            "version":"V1",
+                            "description": "The Data Service class provides a collection of operations that give access to the RFI dataset.",
+                            "license":"https://creativecommons.org/licenses/by/4.0/",
+                            "licenseLabel": "CC BY 4.0",
+                            "created": "2024-07-09",
+                            "keyword":["sentinel-1", "rfi", "object detection"],
+                            "creator":["BVLabs"],
+                            "endpointURL":{
+                                "type": "Resource",
+                                "value": "https://zenodo.org/records/12698384"
+                            },
+                            "endpointDescription":{
+                                "type": "Resource",
+                                "value": "The dataset can be downloaded partly or totally via the end-point."
+                            },
+                            "contactPoint": {
+                                "type": "Individual",
+                                "value": "BVLabs, info@bvlabs.ai"
+                            },
+                            "landingPage":{
+                                "type": "Document",
+                                "value": "https://zenodo.org/records/12698384"
+                            },
+                            "theme": {
+                                "type": "Resource",
+                                "value": "Deep learning"
+                            },
+                            "accessRights":{
+                                "type": "RightsStatement",
+                                "value": "open"
+                            },
+                            "format": {
+                                "type": "Concept",
+                                "value": "zip"
+                            },
+                            "wasUsedBy":{
+                                "type": "Activity",
+                                "value": "AI4QC"
+                            },
+                            "subject": [
+                                {
+                                    "type": "Resource",
+                                    "value": "Deep learning"
+                                },
+                                {
+                                    "type": "Resource",
+                                    "value": "Earth observation"
+                                },
+                                {
+                                    "type": "Resource",
+                                    "value": "RFI"
+                                }
+                            ]
+                        }
+                    ]
+                }
             }
         ]
     }
