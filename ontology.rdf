@@ -776,9 +776,9 @@
     
 
 
-    <!-- http://purl.org/ai4qc#dataSources -->
+    <!-- http://purl.org/ai4qc#dataSource -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#dataSources">
+    <owl:DatatypeProperty rdf:about="http://purl.org/ai4qc#dataSource">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy>TDS</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
@@ -1213,7 +1213,7 @@ by AI/ML algorithms in the peer-reviewed literature.</rdfs:definition>
     <owl:Class rdf:about="http://purl.org/ai4qc#AI_TrainingData">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/ai4qc#dataSources"/>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#dataSource"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1246,7 +1246,7 @@ by AI/ML algorithms in the peer-reviewed literature.</rdfs:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/ai4qc#dataSources"/>
+                <owl:onProperty rdf:resource="http://purl.org/ai4qc#dataSource"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1340,6 +1340,14 @@ by AI/ML algorithms in the peer-reviewed literature.</rdfs:definition>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ai4qc#RFI_anomaly -->
+
+    <owl:Class rdf:about="http://purl.org/ai4qc#RFI_anomaly">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ai4qc#EO_anomaly"/>
     </owl:Class>
     
 
