@@ -4421,8 +4421,8 @@
             },
             {
                 "type": "tds:AI_EOTrainingDataset",
-                "identifier":"rfi",
-                "title": "RFI dataset",
+                "identifier":"rfi_ai4qc",
+                "title": "RFI_AI4QC dataset",
                 "description":"This dataset contains a set of labeled RFIs (radio frequency interferences). These interferences are caused by man-made sources and can lead to an artefact in the satellite image, typically a bright rectangular pattern. Bounding boxes were defined around RFI artefacts in Sentinel-1 quick-looks (png images). This dataset can be used to train object detection algorithms to automatically detect these RFIs in a satellite image.",
                 "created":"2024-07-01",
                 "modified":"2024-07-01",
