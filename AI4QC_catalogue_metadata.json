@@ -48,7 +48,7 @@
                 "keyword":["sentinel-2","cloud detection"],
                 "creator":["ESA", "Z_GIS (Salzburg, Austria)", "FIGMMG (Lima, Peru)", "the ISP (Valencia, Spain)", "the aiPUCP (Lima, Peru)."],
                 "publisher":["Z_GIS (Salzburg, Austria)", "FIGMMG (Lima, Peru)", "the ISP (Valencia, Spain)",  "the aiPUCP (Lima, Peru)"],
-                "dataSources":"Sentinel-2",
+                "dataSource":["Sentinel-2"],
                 "scope":"Cloud masks globally distributed and to be used for training of a ML model for automatic detection of clouds.",
                 "imageSize":"509 x 509",
                 "has_class": [
@@ -457,7 +457,7 @@
                 "keyword":["sentinel-2","cloud mask"],
                 "creator":["ESA", "CESBIO","CNES"],
                 "publisher":["CESBIO","CNES"],
-                "dataSources":"Sentinel-2",
+                "dataSource":["Sentinel-2"],
                 "scope":"Cloud masks globally distributed and for the year 2017-2018. The data is to be used for training of a ML model for automatic detection of clouds.",
                 "imageSize":"1830 x 1830",
                 "band":[
@@ -880,9 +880,9 @@
                 "keyword":["sentinel-2","cloud","validation","sky imaging"],
                 "creator":["University of Maryland", "NASA Goddard Space Fligth Center"],
                 "publisher":["University of Maryland", "NASA Goddard Space Fligth Center"],
-                "dataSources":["University of Maryland", "NASA Goddard Space Fligth Center"],
+                "dataSource":["University of Maryland", "NASA Goddard Space Fligth Center"],
                 "scope":"Cloud masks over Goddard Space Fligth Center for 2017-2019, to be used for training of a ML model for automatic detection of clouds.",
-                "imageSize":"varying",
+                "imageSize":"Varying",
                 "has_class": [
                     {
                         "type": "AI_class",
@@ -1285,9 +1285,9 @@
                 "keyword":["sentinel-2","cloud detection","machine learning"],
                 "creator":["ESA", "GFZ German Research Centre for Geosciences"],
                 "publisher":["GFZ German Research Centre for Geosciences"],
-                "dataSources":"Sentinel-2",
+                "dataSource":["Sentinel-2"],
                 "scope":"Labeled pixels are spread over the full globe and are associated to Sentinel-2 images acquired in 2016. The data is to be used for training of a ML model for automatic detection of clouds.",
-                "imageSize":"varying",
+                "imageSize":"Varying",
                 "has_class": [
                     {
                         "type": "AI_class",
@@ -1720,7 +1720,7 @@
                 "keyword":["sentinel-2","validation","pixel collection","cloud mask"],
                 "creator":["ESA", "Brockmann Consult GmbH"],
                 "publisher":["Brockmann Consult GmbH"],
-                "dataSources":"Sentinel-2",
+                "dataSource":["Sentinel-2"],
                 "scope":"The dataset is spatially, temporally (year 2018), and thematically well distributed. Samples are to be used for training of a ML model for automatic detection of clouds.",
                 "imageSize":"1830 x 1830",
                 "extent":"-146.9919739000000050,-55.1327171300000032,142.3419800000000066,73.8886566200000061",
@@ -2230,7 +2230,7 @@
                 "keyword":["sentinel-2", "image segmentation", "Earth observation", "deep learning", "cloud mask", "cloud shadow"],
                 "creator":["ESA", "KappaZeta", "University of Tartu Estonia"],
                 "publisher":["KappaZeta", "University of Tartu Estonia"],
-                "dataSources":"Sentinel-2",
+                "dataSource":["Sentinel-2"],
                 "scope":"The dataset is distributed uniformly over terrestrial Northern Europe for the time range April to October 2020. The data is to be used for training of a ML model for automatic detection of clouds.",
                 "imageSize":"512 x 512",
                 "has_class": [
@@ -2727,7 +2727,7 @@
                 "keyword":["sentinel-2", "semantic segmentation", "Earth observation", "deep learning", "cloud mask", "cloud shadow"],
                 "creator":["ESA", "KappaZeta", "University of Tartu Estonia"],
                 "publisher":["KappaZeta", "University of Tartu Estonia"],
-                "dataSources":"Sentinel-2",
+                "dataSource":["Sentinel-2"],
                 "scope":"The dataset is distributed over the full globe for the year 2020. The data is to be used for training of a ML model for automatic detection of clouds.",
                 "imageSize":"512 x 512",
                 "has_class": [
@@ -3037,7 +3037,7 @@
                 "keyword":["sentinel-2","cloud mask"],
                 "creator":["BVLabs"],
                 "publisher":["BVLabs"],
-                "dataSources":"Sentinel-2",
+                "dataSource":["Sentinel-2"],
                 "scope":"Cloud masks globally distributed and for the year 2017-2018. The data is to be used for training of a ML model for automatic detection of clouds.",
                 "imageSize":"1830 x 1830",
                 "has_class": [
@@ -3310,9 +3310,9 @@
                 "keyword":["sentinel-2","cloud","validation","sky imaging"],
                 "creator":["BVLabs"],
                 "publisher":["BVLabs"],
-                "dataSources":["University of Maryland","NASA Goddard Space Fligth Center"],
+                "dataSource":["University of Maryland","NASA Goddard Space Fligth Center"],
                 "scope":"Cloud masks over Goddard Space Fligth Center for 2017-2019, to be used for training of a ML model for automatic detection of clouds.",
-                "imageSize":"varying",
+                "imageSize":"Varying",
                 "has_class": [
                     {
                         "type": "AI_class",
@@ -3589,9 +3589,9 @@
                 "keyword":["sentinel-2","cloud detection","machine learning"],
                 "creator":["BVLabs"],
                 "publisher":["BVLabs"],
-                "dataSources":"Sentinel-2",
+                "dataSource":["Sentinel-2"],
                 "scope":"Labeled pixels are spread over the full globe and are associated to Sentinel-2 images acquired in 2016. The data is to be used for training of a ML model for automatic detection of clouds.",
-                "imageSize":"varying",
+                "imageSize":"Varying",
                 "has_class": [
                     {
                         "type": "AI_class",
@@ -3847,7 +3847,7 @@
                 "keyword":["sentinel-2","validation","pixel collection","cloud mask"],
                 "creator":["BVLabs"],
                 "publisher":["BVLabs"],
-                "dataSources":"Sentinel-2",
+                "dataSource":["Sentinel-2"],
                 "scope":"The dataset is spatially, temporally (year 2018), and thematically well distributed. Samples are to be used for training of a ML model for automatic detection of clouds.",
                 "extent":"-146.9919739000000050,-55.1327171300000032,142.3419800000000066,73.8886566200000061",
                 "imageSize":"10980 x 10980",
@@ -4148,7 +4148,7 @@
                 "keyword":["sentinel-2", "semantic segmentation", "Earth observation", "deep learning", "cloud mask", "cloud shadow"],
                 "creator":["BVLabs"],
                 "publisher":["BVLabs"],
-                "dataSources":"Sentinel-2",
+                "dataSource":["Sentinel-2"],
                 "scope":"The dataset is distributed over the full globe for the year 2020. The data is to be used for training of a ML model for automatic detection of clouds.",
                 "imageSize":"512 x 512",
                 "has_class": [
@@ -4277,7 +4277,7 @@
                         "type": "AI_LabelingProcedure",
                         "tools":["Computer Vision Annotation Tool (CVAT)", "Segments.ai"],
                         "scope":"Initial labeling of all pixels with one of six classes, the full scene is classified. The cloud masks were then reclassified in the AI4QC context with four new classes: 0-clear, 1-thick cloud, 2-thin cloud, 3-cloud shadow.",
-                
+
                         "method": [
                             {
                                 "type": "Labeling_method",
@@ -4421,7 +4421,7 @@
             },
             {
                 "type": "tds:AI_EOTrainingDataset",
-                "identifier":"rfi_ai4qc",
+                "identifier":"rfi-ai4qc",
                 "title": "RFI_AI4QC dataset",
                 "description":"This dataset contains a set of labeled RFIs (radio frequency interferences). These interferences are caused by man-made sources and can lead to an artefact in the satellite image, typically a bright rectangular pattern. Bounding boxes were defined around RFI artefacts in Sentinel-1 quick-looks (png images). This dataset can be used to train object detection algorithms to automatically detect these RFIs in a satellite image.",
                 "created":"2024-07-01",
@@ -4444,9 +4444,9 @@
                 "keyword":["sentinel-1","object detection", "rfi"],
                 "creator":["BVLabs"],
                 "publisher":["BVLabs"],
-                "dataSources":"Sentinel-1",
+                "dataSource":["Sentinel-1"],
                 "scope":"Bounding boxes around RFIs to be used for training of a ML model for automatic detection of RFIs.",
-                "imageSize":"Varying",   
+                "imageSize":"Varying",
                 "has_class": [
                     {
                         "type": "AI_class",
