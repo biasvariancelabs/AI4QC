@@ -4423,9 +4423,9 @@
                 "type": "tds:AI_EOTrainingDataset",
                 "identifier":"rfi-ai4qc",
                 "title": "RFI_AI4QC dataset",
-                "description":"This dataset contains a set of labeled RFIs (radio frequency interferences). These interferences are caused by man-made sources and can lead to an artefact in the satellite image, typically a bright rectangular pattern. Bounding boxes were defined around RFI artefacts in Sentinel-1 quick-looks (png images). This dataset can be used to train object detection algorithms to automatically detect these RFIs in a satellite image.",
+                "description":"This dataset contains a set of labeled RFIs (radio frequency interferences). These interferences are caused by man-made sources and can lead to an artefact in the satellite image, typically a bright rectangular pattern. Bounding boxes were defined around RFI artefacts in Sentinel-1 quick-looks (png images). This dataset can be used to train object detection algorithms to automatically detect these RFIs in a satellite image. A predefined train/test split is available (80% training and 20% testing), with training and testing zip folders containing the images and labels for each subset. The data was split according to 3 criterias: RFI over land vs sea, size of the RFI bounding boxes and geographic location.",
                 "created":"2024-07-01",
-                "modified":"2024-07-01",
+                "modified":"2024-09-13",
                 "anomaly": {
                     "type": "rfi_anomaly",
                     "rdfs:label": "rfi-anomaly"
@@ -4438,7 +4438,7 @@
                 },
                 "amountOfTrainingData": "3940",
                 "numberOfClasses":"2",
-                "version":"V1",
+                "version":"V2",
                 "license":"https://creativecommons.org/licenses/by/4.0/",
                 "licenseLabel": "CC BY 4.0",
                 "keyword":["sentinel-1","object detection", "rfi"],
@@ -4518,11 +4518,11 @@
                 "distribution": {
                     "type": "dcat:Distribution",
                     "identifier":"rfi-distribution",
-                    "description": "The dataset is distributed as a set of PNG images (the S1 quick-looks) and a set of labels (bounding boxes). Three formats are available for the labels: PASCAL VOC (xml files), COCO (json files) and YOLO (txt files).",
+                    "description": "The dataset is distributed as a set of PNG images (the S1 quick-looks) and a set of labels (bounding boxes). Three formats are available for the labels: PASCAL VOC (xml files), COCO (json files) and YOLO (txt files). Training and testing folders are available for a predefined split.",
                     "issued":"2024-07-09",
-                    "modified":"2024-07-09",
+                    "modified":"2024-09-13",
                     "title":"rfi distribution",
-                    "byteSize": "905969664",
+                    "byteSize": "1932735283",
                     "language": {
                         "type": "LinguisticSystem",
                         "value": "English"
@@ -4533,7 +4533,7 @@
                     },
                     "accessURL": {
                         "type": "Resource",
-                        "value": "https://zenodo.org/records/12698384"
+                        "value": "https://zenodo.org/records/13757181"
                     },
                     "availability": {
                         "type": "Concept",
@@ -4549,7 +4549,7 @@
                     },
                     "downloadURL": {
                         "type": "Resource",
-                        "value": "https://zenodo.org/records/12698384"
+                        "value": "https://zenodo.org/records/13757181"
                     },
                     "mediaType":[
                         {
@@ -4575,7 +4575,7 @@
                     },
                     "page":{
                         "type": "Document",
-                        "value": "https://zenodo.org/records/12698384"
+                        "value": "https://zenodo.org/records/13757181"
                     },
                     "hasPolicy":{
                         "type":"Policy",
@@ -4586,7 +4586,8 @@
                             "type": "dcat:DataService",
                             "identifier":"rfi-data-service",
                             "title":"rfi data service",
-                            "version":"V1",
+                            "version":"V2",
+                            "versionNotes":"From V1 to V2 the train/test split was added.",
                             "description": "The Data Service class provides a collection of operations that give access to the RFI dataset.",
                             "license":"https://creativecommons.org/licenses/by/4.0/",
                             "licenseLabel": "CC BY 4.0",
@@ -4595,7 +4596,7 @@
                             "creator":["BVLabs"],
                             "endpointURL":{
                                 "type": "Resource",
-                                "value": "https://zenodo.org/records/12698384"
+                                "value": "https://zenodo.org/records/13757181"
                             },
                             "endpointDescription":{
                                 "type": "Resource",
@@ -4607,7 +4608,7 @@
                             },
                             "landingPage":{
                                 "type": "Document",
-                                "value": "https://zenodo.org/records/12698384"
+                                "value": "https://zenodo.org/records/13757181"
                             },
                             "theme": {
                                 "type": "Resource",
@@ -4615,7 +4616,7 @@
                             },
                             "accessRights":{
                                 "type": "RightsStatement",
-                                "value": "open"
+                                "value": "restricted"
                             },
                             "format": {
                                 "type": "Concept",
