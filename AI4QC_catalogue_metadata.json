@@ -4643,6 +4643,306 @@
                         }
                     ]
                 }
+            },
+            {
+                "type": "tds:AI_EOTrainingDataset",
+                "identifier":"S1-new-anomalies-ai4qc",
+                "title": "S1_New_Anomalies_AI4QC dataset",
+                "description":"This dataset was used in the AI4QC project (Artificial Intelligence for Quality Control), in the context of the detection of new anomalies through unsupervised learning. It consists of 6344 Sentinel-1 images (quick-looks in png format). The dataset was divided into training (80%) and testing (20%). Two criterias were considered for the train/test split: seasonality and geographic location.",
+                "created":"2024-09-23",
+                "modified":"2024-09-23",
+                "anomaly": {
+                    "type": "new_anomaly",
+                    "rdfs:label": "new-anomaly"
+                },
+                "has-task":{
+                    "type": "AI_EOTask",
+                    "identifier":"unsupervised learning",
+                    "description":"Unsupervised learning with unlabeled data.",
+                    "taskType":"unsupervised learning"
+                },
+                "amountOfTrainingData": "6344",
+                "version":"V1",
+                "license":"https://creativecommons.org/licenses/by/4.0/",
+                "licenseLabel": "CC BY 4.0",
+                "keyword":["sentinel-1","unsupervised learning", "anomaly detection"],
+                "creator":["BVLabs"],
+                "publisher":["BVLabs"],
+                "dataSource":["Sentinel-1"],
+                "scope":"Sentinel-1 images to be used for training of a ML model for automatic detection of anomalies.",
+                "imageSize":"Varying",
+                "statisticsInfo": [
+                    {
+                        "type": "Statistic",
+                        "label": "number of image patches",
+                        "value": "6344"
+                    }
+                ],
+                "distribution": {
+                    "type": "dcat:Distribution",
+                    "identifier":"s1-new-anomalies-distribution",
+                    "description": "The dataset is distributed as a set of PNG images (the S1 quick-looks). Training and testing folders are available for a predefined split.",
+                    "issued":"2024-09-23",
+                    "modified":"2024-09-23",
+                    "title":"S1_New_Anomalies_AI4QC distribution",
+                    "byteSize": "1825361100",
+                    "language": {
+                        "type": "LinguisticSystem",
+                        "value": "English"
+                    },
+                    "rights": {
+                        "type": "RightsStatement",
+                        "value": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited."
+                    },
+                    "accessURL": {
+                        "type": "Resource",
+                        "value": "https://zenodo.org/records/13789234"
+                    },
+                    "availability": {
+                        "type": "Concept",
+                        "value": "available"
+                    },
+                    "format": {
+                        "type": "Concept",
+                        "value": "zip"
+                    },
+                    "status": {
+                        "type": "Concept",
+                        "value": "completed"
+                    },
+                    "downloadURL": {
+                        "type": "Resource",
+                        "value": "https://zenodo.org/records/13789234"
+                    },
+                    "mediaType":[
+                        {
+                            "type": "MediaType",
+                            "value": "image/png"
+                        }
+                    ],
+                    "packageFormat":{
+                        "type": "MediaType",
+                        "value": "application/zip"
+                    },
+                    "page":{
+                        "type": "Document",
+                        "value": "https://zenodo.org/records/13789234"
+                    },
+                    "hasPolicy":{
+                        "type":"Policy",
+                        "value": "You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits."
+                    },
+                    "accessService": [
+                        {
+                            "type": "dcat:DataService",
+                            "identifier":"s1-new-anomalies-data-service",
+                            "title":"S1_New_Anomalies_AI4QC data service",
+                            "version":"V1",
+                            "description": "The Data Service class provides a collection of operations that give access to the S1_New_Anomalies dataset.",
+                            "license":"https://creativecommons.org/licenses/by/4.0/",
+                            "licenseLabel": "CC BY 4.0",
+                            "created": "2024-09-23",
+                            "keyword":["sentinel-1", "unsupervised learning", "anomaly detection"],
+                            "creator":["BVLabs"],
+                            "endpointURL":{
+                                "type": "Resource",
+                                "value": "https://zenodo.org/records/13789234"
+                            },
+                            "endpointDescription":{
+                                "type": "Resource",
+                                "value": "The dataset can be downloaded partly or totally via the end-point."
+                            },
+                            "contactPoint": {
+                                "type": "Individual",
+                                "value": "BVLabs, info@bvlabs.ai"
+                            },
+                            "landingPage":{
+                                "type": "Document",
+                                "value": "https://zenodo.org/records/13789234"
+                            },
+                            "theme": {
+                                "type": "Resource",
+                                "value": "Deep learning"
+                            },
+                            "accessRights":{
+                                "type": "RightsStatement",
+                                "value": "restricted"
+                            },
+                            "format": {
+                                "type": "Concept",
+                                "value": "zip"
+                            },
+                            "wasUsedBy":{
+                                "type": "Activity",
+                                "value": "AI4QC"
+                            },
+                            "subject": [
+                                {
+                                    "type": "Resource",
+                                    "value": "Deep learning"
+                                },
+                                {
+                                    "type": "Resource",
+                                    "value": "Earth observation"
+                                },
+                                {
+                                    "type": "Resource",
+                                    "value": "Anomaly detection"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "tds:AI_EOTrainingDataset",
+                "identifier":"S2-new-anomalies-ai4qc",
+                "title": "S2_New_Anomalies_AI4QC dataset",
+                "description":"This dataset was used in the AI4QC project (Artificial Intelligence for Quality Control), in the context of the detection of new anomalies through unsupervised learning. It consists of 6452 Sentinel-2 images (true color images in jpg format). The dataset was divided into training (80%) and testing (20%). Two criterias were considered for the train/test split: seasonality and geographic location.",
+                "created":"2024-09-23",
+                "modified":"2024-09-23",
+                "anomaly": {
+                    "type": "new_anomaly",
+                    "rdfs:label": "new-anomaly"
+                },
+                "has-task":{
+                    "type": "AI_EOTask",
+                    "identifier":"unsupervised learning",
+                    "description":"Unsupervised learning with unlabeled data.",
+                    "taskType":"unsupervised learning"
+                },
+                "amountOfTrainingData": "6452",
+                "version":"V1",
+                "license":"https://creativecommons.org/licenses/by/4.0/",
+                "licenseLabel": "CC BY 4.0",
+                "keyword":["sentinel-2","unsupervised learning", "anomaly detection"],
+                "creator":["BVLabs"],
+                "publisher":["BVLabs"],
+                "dataSource":["Sentinel-2"],
+                "scope":"Sentinel-2 images to be used for training of a ML model for automatic detection of anomalies.",
+                "imageSize":"10980 x 10980",
+                "statisticsInfo": [
+                    {
+                        "type": "Statistic",
+                        "label": "number of image patches",
+                        "value": "6452"
+                    }
+                ],
+                "distribution": {
+                    "type": "dcat:Distribution",
+                    "identifier":"s2-new-anomalies-distribution",
+                    "description": "The dataset is distributed as a set of JPG images (the S2 true color images). Training and testing folders are available for a predefined split.",
+                    "issued":"2024-09-23",
+                    "modified":"2024-09-23",
+                    "title":"S2_New_Anomalies_AI4QC distribution",
+                    "byteSize": "62277025792",
+                    "language": {
+                        "type": "LinguisticSystem",
+                        "value": "English"
+                    },
+                    "rights": {
+                        "type": "RightsStatement",
+                        "value": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited."
+                    },
+                    "accessURL": {
+                        "type": "Resource",
+                        "value": "https://zenodo.org/records/13790109"
+                    },
+                    "availability": {
+                        "type": "Concept",
+                        "value": "available"
+                    },
+                    "format": {
+                        "type": "Concept",
+                        "value": "zip"
+                    },
+                    "status": {
+                        "type": "Concept",
+                        "value": "completed"
+                    },
+                    "downloadURL": {
+                        "type": "Resource",
+                        "value": "https://zenodo.org/records/13790109"
+                    },
+                    "mediaType":[
+                        {
+                            "type": "MediaType",
+                            "value": "image/jpg"
+                        }
+                    ],
+                    "packageFormat":{
+                        "type": "MediaType",
+                        "value": "application/zip"
+                    },
+                    "page":{
+                        "type": "Document",
+                        "value": "https://zenodo.org/records/13790109"
+                    },
+                    "hasPolicy":{
+                        "type":"Policy",
+                        "value": "You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits."
+                    },
+                    "accessService": [
+                        {
+                            "type": "dcat:DataService",
+                            "identifier":"s2-new-anomalies-data-service",
+                            "title":"S2_New_Anomalies_AI4QC data service",
+                            "version":"V1",
+                            "description": "The Data Service class provides a collection of operations that give access to the S2_New_Anomalies dataset.",
+                            "license":"https://creativecommons.org/licenses/by/4.0/",
+                            "licenseLabel": "CC BY 4.0",
+                            "created": "2024-09-23",
+                            "keyword":["sentinel-2", "unsupervised learning", "anomaly detection"],
+                            "creator":["BVLabs"],
+                            "endpointURL":{
+                                "type": "Resource",
+                                "value": "https://zenodo.org/records/13790109"
+                            },
+                            "endpointDescription":{
+                                "type": "Resource",
+                                "value": "The dataset can be downloaded partly or totally via the end-point."
+                            },
+                            "contactPoint": {
+                                "type": "Individual",
+                                "value": "BVLabs, info@bvlabs.ai"
+                            },
+                            "landingPage":{
+                                "type": "Document",
+                                "value": "https://zenodo.org/records/13790109"
+                            },
+                            "theme": {
+                                "type": "Resource",
+                                "value": "Deep learning"
+                            },
+                            "accessRights":{
+                                "type": "RightsStatement",
+                                "value": "restricted"
+                            },
+                            "format": {
+                                "type": "Concept",
+                                "value": "zip"
+                            },
+                            "wasUsedBy":{
+                                "type": "Activity",
+                                "value": "AI4QC"
+                            },
+                            "subject": [
+                                {
+                                    "type": "Resource",
+                                    "value": "Deep learning"
+                                },
+                                {
+                                    "type": "Resource",
+                                    "value": "Earth observation"
+                                },
+                                {
+                                    "type": "Resource",
+                                    "value": "Anomaly detection"
+                                }
+                            ]
+                        }
+                    ]
+                }
             }
         ]
     }
