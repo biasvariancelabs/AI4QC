@@ -4650,7 +4650,7 @@
                 "title": "S1_New_Anomalies_AI4QC dataset",
                 "description":"This dataset was used in the AI4QC project (Artificial Intelligence for Quality Control), in the context of the detection of new anomalies through unsupervised learning. It consists of 6344 Sentinel-1 images (quick-looks in png format). The dataset was divided into training (80%) and testing (20%). Two criterias were considered for the train/test split: seasonality and geographic location.",
                 "created":"2024-09-23",
-                "modified":"2024-09-23",
+                "modified":"2024-10-09",
                 "anomaly": {
                     "type": "new_anomaly",
                     "rdfs:label": "new-anomaly"
@@ -4662,7 +4662,7 @@
                     "taskType":"unsupervised learning"
                 },
                 "amountOfTrainingData": "6344",
-                "version":"V1",
+                "version":"V2",
                 "license":"https://creativecommons.org/licenses/by/4.0/",
                 "licenseLabel": "CC BY 4.0",
                 "keyword":["sentinel-1","unsupervised learning", "anomaly detection"],
@@ -4681,9 +4681,9 @@
                 "distribution": {
                     "type": "dcat:Distribution",
                     "identifier":"s1-new-anomalies-distribution",
-                    "description": "The dataset is distributed as a set of PNG images (the S1 quick-looks). Training and testing folders are available for a predefined split.",
+                    "description": "The dataset is distributed as a set of PNG images (the S1 quick-looks). Training and testing folders are available for a predefined split. An additional folder contains 61 more products which were flagged as anomalous by the MPC. This data is not included in the train/test folders but can be used if one wishes to increase the amount of S1 products.",
                     "issued":"2024-09-23",
-                    "modified":"2024-09-23",
+                    "modified":"2024-10-09",
                     "title":"S1_New_Anomalies_AI4QC distribution",
                     "byteSize": "1825361100",
                     "language": {
@@ -4696,7 +4696,7 @@
                     },
                     "accessURL": {
                         "type": "Resource",
-                        "value": "https://zenodo.org/records/13789234"
+                        "value": "https://zenodo.org/records/13907111"
                     },
                     "availability": {
                         "type": "Concept",
@@ -4712,7 +4712,7 @@
                     },
                     "downloadURL": {
                         "type": "Resource",
-                        "value": "https://zenodo.org/records/13789234"
+                        "value": "https://zenodo.org/records/13907111"
                     },
                     "mediaType":[
                         {
@@ -4726,7 +4726,7 @@
                     },
                     "page":{
                         "type": "Document",
-                        "value": "https://zenodo.org/records/13789234"
+                        "value": "https://zenodo.org/records/13907111"
                     },
                     "hasPolicy":{
                         "type":"Policy",
@@ -4737,7 +4737,8 @@
                             "type": "dcat:DataService",
                             "identifier":"s1-new-anomalies-data-service",
                             "title":"S1_New_Anomalies_AI4QC data service",
-                            "version":"V1",
+                            "version":"V2",
+                            "versionNotes":"From V1 to V2 the S1_additional_data was added.",
                             "description": "The Data Service class provides a collection of operations that give access to the S1_New_Anomalies dataset.",
                             "license":"https://creativecommons.org/licenses/by/4.0/",
                             "licenseLabel": "CC BY 4.0",
@@ -4746,7 +4747,7 @@
                             "creator":["BVLabs"],
                             "endpointURL":{
                                 "type": "Resource",
-                                "value": "https://zenodo.org/records/13789234"
+                                "value": "https://zenodo.org/records/13907111"
                             },
                             "endpointDescription":{
                                 "type": "Resource",
@@ -4758,7 +4759,7 @@
                             },
                             "landingPage":{
                                 "type": "Document",
-                                "value": "https://zenodo.org/records/13789234"
+                                "value": "https://zenodo.org/records/13907111"
                             },
                             "theme": {
                                 "type": "Resource",
@@ -4800,7 +4801,7 @@
                 "title": "S2_New_Anomalies_AI4QC dataset",
                 "description":"This dataset was used in the AI4QC project (Artificial Intelligence for Quality Control), in the context of the detection of new anomalies through unsupervised learning. It consists of 6452 Sentinel-2 images (true color images in jpg format). The dataset was divided into training (80%) and testing (20%). Two criterias were considered for the train/test split: seasonality and geographic location.",
                 "created":"2024-09-23",
-                "modified":"2024-09-23",
+                "modified":"2024-10-09",
                 "anomaly": {
                     "type": "new_anomaly",
                     "rdfs:label": "new-anomaly"
@@ -4812,7 +4813,7 @@
                     "taskType":"unsupervised learning"
                 },
                 "amountOfTrainingData": "6452",
-                "version":"V1",
+                "version":"V2",
                 "license":"https://creativecommons.org/licenses/by/4.0/",
                 "licenseLabel": "CC BY 4.0",
                 "keyword":["sentinel-2","unsupervised learning", "anomaly detection"],
@@ -4831,9 +4832,9 @@
                 "distribution": {
                     "type": "dcat:Distribution",
                     "identifier":"s2-new-anomalies-distribution",
-                    "description": "The dataset is distributed as a set of JPG images (the S2 true color images). Training and testing folders are available for a predefined split.",
+                    "description": "The dataset is distributed as a set of JPG images (the S2 true color images). Training and testing folders are available for a predefined split. An additional folder contains 61 more products which were flagged as anomalous by the MPC. This data is not included in the train/test folders but can be used if one wishes to increase the amount of S2 products.",
                     "issued":"2024-09-23",
-                    "modified":"2024-09-23",
+                    "modified":"2024-10-09",
                     "title":"S2_New_Anomalies_AI4QC distribution",
                     "byteSize": "62277025792",
                     "language": {
@@ -4846,7 +4847,7 @@
                     },
                     "accessURL": {
                         "type": "Resource",
-                        "value": "https://zenodo.org/records/13790109"
+                        "value": "https://zenodo.org/records/13907209"
                     },
                     "availability": {
                         "type": "Concept",
@@ -4862,7 +4863,7 @@
                     },
                     "downloadURL": {
                         "type": "Resource",
-                        "value": "https://zenodo.org/records/13790109"
+                        "value": "https://zenodo.org/records/13907209"
                     },
                     "mediaType":[
                         {
@@ -4876,7 +4877,7 @@
                     },
                     "page":{
                         "type": "Document",
-                        "value": "https://zenodo.org/records/13790109"
+                        "value": "https://zenodo.org/records/13907209"
                     },
                     "hasPolicy":{
                         "type":"Policy",
@@ -4887,7 +4888,8 @@
                             "type": "dcat:DataService",
                             "identifier":"s2-new-anomalies-data-service",
                             "title":"S2_New_Anomalies_AI4QC data service",
-                            "version":"V1",
+                            "version":"V2",
+                            "versionNotes":"From V1 to V2 the S2_additional_data was added.",
                             "description": "The Data Service class provides a collection of operations that give access to the S2_New_Anomalies dataset.",
                             "license":"https://creativecommons.org/licenses/by/4.0/",
                             "licenseLabel": "CC BY 4.0",
@@ -4896,7 +4898,7 @@
                             "creator":["BVLabs"],
                             "endpointURL":{
                                 "type": "Resource",
-                                "value": "https://zenodo.org/records/13790109"
+                                "value": "https://zenodo.org/records/13907209"
                             },
                             "endpointDescription":{
                                 "type": "Resource",
@@ -4908,7 +4910,7 @@
                             },
                             "landingPage":{
                                 "type": "Document",
-                                "value": "https://zenodo.org/records/13790109"
+                                "value": "https://zenodo.org/records/13907209"
                             },
                             "theme": {
                                 "type": "Resource",
