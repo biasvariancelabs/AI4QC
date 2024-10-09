@@ -4533,7 +4533,7 @@
                     },
                     "accessURL": {
                         "type": "Resource",
-                        "value": "https://zenodo.org/records/13757181"
+                        "value": "https://zenodo.org/records/13848248"
                     },
                     "availability": {
                         "type": "Concept",
@@ -4549,7 +4549,7 @@
                     },
                     "downloadURL": {
                         "type": "Resource",
-                        "value": "https://zenodo.org/records/13757181"
+                        "value": "https://zenodo.org/records/13848248"
                     },
                     "mediaType":[
                         {
@@ -4575,7 +4575,7 @@
                     },
                     "page":{
                         "type": "Document",
-                        "value": "https://zenodo.org/records/13757181"
+                        "value": "https://zenodo.org/records/13848248"
                     },
                     "hasPolicy":{
                         "type":"Policy",
@@ -4586,8 +4586,8 @@
                             "type": "dcat:DataService",
                             "identifier":"rfi-data-service",
                             "title":"rfi data service",
-                            "version":"V2",
-                            "versionNotes":"From V1 to V2 the train/test split was added.",
+                            "version":"V3",
+                            "versionNotes":"From V1 to V3 the train/test split was added and some labels were corrected.",
                             "description": "The Data Service class provides a collection of operations that give access to the RFI dataset.",
                             "license":"https://creativecommons.org/licenses/by/4.0/",
                             "licenseLabel": "CC BY 4.0",
@@ -4596,7 +4596,7 @@
                             "creator":["BVLabs"],
                             "endpointURL":{
                                 "type": "Resource",
-                                "value": "https://zenodo.org/records/13757181"
+                                "value": "https://zenodo.org/records/13848248"
                             },
                             "endpointDescription":{
                                 "type": "Resource",
@@ -4608,7 +4608,7 @@
                             },
                             "landingPage":{
                                 "type": "Document",
-                                "value": "https://zenodo.org/records/13757181"
+                                "value": "https://zenodo.org/records/13848248"
                             },
                             "theme": {
                                 "type": "Resource",
@@ -4938,6 +4938,242 @@
                                 {
                                     "type": "Resource",
                                     "value": "Anomaly detection"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "tds:AI_EOTrainingDataset",
+                "identifier":"parallax_ai4qc",
+                "title": "Parallax_AI4QC dataset",
+                "description":"This dataset was used in the AI4QC project (Artificial Intelligence for Quality Control), in the context of parallax detection through an object detection task. It consists of a set of labeled parallax artefacts. This effect appears as a colorful pattern in images where cloud/heavy haze is present. Bounding boxes were defined around parallax artefacts in 1764 Sentinel-2 true colour images (jpg format). A parallax artefact appears mostly over clouds, although it can also be found over land. Two sets of labels are available: rotated_bboxes and straight_bboxes. This comes from the fact that parallax artefacts are often rotated on the image. The rotated bounding boxes will contain only the rotated parallax artefact and not the background. However since most machine learning models don't account for a rotation value, straight bounding boxes were created as well. These bounding boxes will contain some of the background as well as the parallax. A predefined train/test split is available (80% training and 20% testing). The data was split according to 2 criterias: parallax over cloud vs land and geographic location.",
+                "created":"2024-10-08",
+                "modified":"2024-10-08",
+                "anomaly": {
+                    "type": "parallax_anomaly",
+                    "rdfs:label": "parallax-anomaly"
+                },
+                "has-task":{
+                    "type": "AI_EOTask",
+                    "identifier":"object detection",
+                    "description":"Object detection with a bounding box around the parallax artefact.",
+                    "taskType":"object detection"
+                },
+                "amountOfTrainingData": "1764",
+                "numberOfClasses":"4",
+                "version":"V1",
+                "license":"https://creativecommons.org/licenses/by/4.0/",
+                "licenseLabel": "CC BY 4.0",
+                "keyword":["sentinel-2","object detection", "parallax"],
+                "creator":["BVLabs"],
+                "publisher":["BVLabs"],
+                "dataSources":"Sentinel-2",
+                "scope":"Bounding boxes around parallax artefacts to be used for training of a ML model for automatic detection of the parallax effect.",
+                "imageSize":"1296 x 1296",   
+                "has_class": [
+                    {
+                        "type": "AI_class",
+                        "label": "Parallax - Cloud",
+                        "identifier": 0
+                    },
+                    {
+                        "type": "AI_class",
+                        "label": "Parallax - Land",
+                        "identifier": 1
+                    },
+                    {
+                        "type": "AI_class",
+                        "label": "Other Anomaly",
+                        "identifier": 2
+                    },
+                    {
+                        "type": "AI_class",
+                        "label": "Missing Data - Land",
+                        "identifier": 3
+                    }
+                ],
+                "statisticsInfo": [
+                    {
+                        "type": "Statistic",
+                        "label": "number of image patches",
+                        "value": "1764"
+                    },
+                    {
+                        "type": "Statistic",
+                        "label": "number of parallax over cloud",
+                        "value": "9529"
+                    },
+                    {
+                        "type": "Statistic",
+                        "label": "number of parallax over land",
+                        "value": "245"
+                    },
+                    {
+                        "type": "Statistic",
+                        "label": "number of other anomalies",
+                        "value": "4"
+                    },
+                    {
+                        "type": "Statistic",
+                        "label": "number of missing data over land",
+                        "value": "2"
+                    }
+                ],
+                "labeling": {
+                    "type": "AI_Labeling",
+                    "identifier":"parallax-labeling",
+                    "labeler":[
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"parallax-labeler_1",
+                            "name":"Alvarez R."
+                        },
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"parallax-labeler_2",
+                            "name":"Clifton H."
+                        },
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"parallax-labeler_3",
+                            "name":"Cervino A."
+                        },
+                        {
+                            "type": "AI_Labeler",
+                            "identifier":"parallax-labeler_4",
+                            "name":"Duran M."
+                        }
+                    ],
+                    "procedure":{
+                        "identifier":"parallax-labeling-procedure",
+                        "type": "AI_LabelingProcedure",
+                        "tools":["Open Source Data Labeling - Label Studio"],
+                        "scope":"Labeling of parallax, other anomalies and missing data through the definition of bounding boxes.",
+                        "method": [
+                            {
+                                "type": "Labeling_method",
+                                "label": "labels",
+                                "definition": "The bounding boxes labels were created using Label Studio."
+                            }
+                        ]
+                    }
+                },
+                "distribution": {
+                    "type": "dcat:Distribution",
+                    "identifier":"parallax-distribution",
+                    "description": "The dataset is distributed as a set of JPG images (the S2 true colour images) and a set of labels (bounding boxes) in COCO format. The training and testing zip folders contain the images and labels for each subset.",
+                    "issued":"2024-10-08",
+                    "modified":"2024-10-08",
+                    "title":"parallax distribution",
+                    "byteSize": "866228633.6",
+                    "language": {
+                        "type": "LinguisticSystem",
+                        "value": "English"
+                    },
+                    "rights": {
+                        "type": "RightsStatement",
+                        "value": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited."
+                    },
+                    "accessURL": {
+                        "type": "Resource",
+                        "value": "https://zenodo.org/records/13903820"
+                    },
+                    "availability": {
+                        "type": "Concept",
+                        "value": "available"
+                    },
+                    "format": {
+                        "type": "Concept",
+                        "value": "zip"
+                    },
+                    "status": {
+                        "type": "Concept",
+                        "value": "completed"
+                    },
+                    "downloadURL": {
+                        "type": "Resource",
+                        "value": "https://zenodo.org/records/13903820"
+                    },
+                    "mediaType":[
+                        {
+                            "type": "MediaType",
+                            "value": "image/jpg"
+                        },
+                        {
+                            "type": "MediaType",
+                            "value": "application/json"
+                        }
+                    ],
+                    "packageFormat":{
+                        "type": "MediaType",
+                        "value": "application/zip"
+                    },
+                    "page":{
+                        "type": "Document",
+                        "value": "https://zenodo.org/records/13903820"
+                    },
+                    "hasPolicy":{
+                        "type":"Policy",
+                        "value": "You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits."
+                    },
+                    "accessService": [
+                        {
+                            "type": "dcat:DataService",
+                            "identifier":"parallax-data-service",
+                            "title":"parallax data service",
+                            "version":"V1",
+                            "description": "The Data Service class provides a collection of operations that give access to the Parallax_AI4QC dataset.",
+                            "license":"https://creativecommons.org/licenses/by/4.0/",
+                            "licenseLabel": "CC BY 4.0",
+                            "created": "2024-10-08",
+                            "keyword":["sentinel-2", "parallax", "object detection"],
+                            "creator":["BVLabs"],
+                            "endpointURL":{
+                                "type": "Resource",
+                                "value": "https://zenodo.org/records/13903820"
+                            },
+                            "endpointDescription":{
+                                "type": "Resource",
+                                "value": "The dataset can be downloaded partly or totally via the end-point."
+                            },
+                            "contactPoint": {
+                                "type": "Individual",
+                                "value": "BVLabs, info@bvlabs.ai"
+                            },
+                            "landingPage":{
+                                "type": "Document",
+                                "value": "https://zenodo.org/records/13903820"
+                            },
+                            "theme": {
+                                "type": "Resource",
+                                "value": "Deep learning"
+                            },
+                            "accessRights":{
+                                "type": "RightsStatement",
+                                "value": "restricted"
+                            },
+                            "format": {
+                                "type": "Concept",
+                                "value": "zip"
+                            },
+                            "wasUsedBy":{
+                                "type": "Activity",
+                                "value": "AI4QC"
+                            },
+                            "subject": [
+                                {
+                                    "type": "Resource",
+                                    "value": "Deep learning"
+                                },
+                                {
+                                    "type": "Resource",
+                                    "value": "Earth observation"
+                                },
+                                {
+                                    "type": "Resource",
+                                    "value": "Parallax"
                                 }
                             ]
                         }
