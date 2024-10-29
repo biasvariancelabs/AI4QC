@@ -3584,8 +3584,8 @@
                 "amountOfTrainingData": "58",
                 "numberOfClasses":"4",
                 "version":"V4",
-                "license":"https://creativecommons.org/licenses/by/4.0/",
-                "licenseLabel": "CC BY 4.0",
+                "license":"https://creativecommons.org/licenses/by-nc/4.0/",
+                "licenseLabel": "CC BY-NC 4.0",
                 "keyword":["sentinel-2","cloud detection","machine learning"],
                 "creator":["BVLabs"],
                 "publisher":["BVLabs"],
@@ -3735,7 +3735,7 @@
                     },
                     "rights": {
                         "type": "RightsStatement",
-                        "value": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited."
+                        "value": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited. The material cannot be used for commercial purposes."
                     },
                     "accessURL": {
                         "type": "Resource",
@@ -3776,8 +3776,8 @@
                             "title":"hollstein-ai4qc data service",
                             "version":"V1",
                             "description": "The Data Service class provides a collection of operations that give access to the Hollstein-AI4QC dataset.",
-                            "license":"https://creativecommons.org/licenses/by/4.0/",
-                            "licenseLabel": "CC BY 4.0",
+                            "license":"https://creativecommons.org/licenses/by-nc/4.0/",
+                            "licenseLabel": "CC BY-NC 4.0",
                             "created": "2024-06-28",
                             "keyword":["sentinel-2", "cloud detection", "machine learning"],
                             "creator": ["BVLabs"],
