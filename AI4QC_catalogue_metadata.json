@@ -880,7 +880,7 @@
                 "keyword":["sentinel-2","cloud","validation","sky imaging"],
                 "creator":["University of Maryland", "NASA Goddard Space Fligth Center"],
                 "publisher":["University of Maryland", "NASA Goddard Space Fligth Center"],
-                "dataSource":["University of Maryland", "NASA Goddard Space Fligth Center"],
+                "dataSource":["Sentinel-2"],
                 "scope":"Cloud masks over Goddard Space Fligth Center for 2017-2019, to be used for training of a ML model for automatic detection of clouds.",
                 "imageSize":"Varying",
                 "has_class": [
@@ -3310,7 +3310,7 @@
                 "keyword":["sentinel-2","cloud","validation","sky imaging"],
                 "creator":["BVLabs"],
                 "publisher":["BVLabs"],
-                "dataSource":["University of Maryland","NASA Goddard Space Fligth Center"],
+                "dataSource":["Sentinel-2"],
                 "scope":"Cloud masks over Goddard Space Fligth Center for 2017-2019, to be used for training of a ML model for automatic detection of clouds.",
                 "imageSize":"Varying",
                 "has_class": [
