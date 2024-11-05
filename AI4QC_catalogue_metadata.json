@@ -3287,7 +3287,7 @@
             {
                 "type": "tds:AI_EOTrainingDataset",
                 "identifier":"gsfc-ai4qc",
-                "title": "GSFC-AI4QC dataset",
+                "title": "GSFC_AI4QC dataset",
                 "description":"The dataset was used in the AI4QC project (Artificial Intelligence for Quality Control), in the context of cloud detection through semantic segmentation. It consists of a set of 27 reference cloud masks over NASA GSFC (coordinate reference system EPSG:32618) for various cloud conditions from September 2017 to November 2018. The cloud masks are associated to Sentinel-2 satellite data. The dataset is a smaller version of the GSFC dataset, where S2 L1C images were added, the cloud masks reclassified and rasterized (from Shapefiles to TiFF files). The new classes are the following: 0-clear, 1-thick cloud, 2-thin cloud, 3-cloud shadow. The cloud masks have varying sizes with a resolution of 10m. The original GSFC dataset is available at https://data.mendeley.com/datasets/r7tnvx7d9g/1.",
                 "originates_from":"gsfc",
                 "created":"2024-03-18",
@@ -3566,7 +3566,7 @@
             {
                 "type": "tds:AI_EOTrainingDataset",
                 "identifier":"hollstein-ai4qc",
-                "title": "Hollstein-AI4QC dataset",
+                "title": "Hollstein_AI4QC dataset",
                 "description":"This dataset was used for the AI4QC project (Artificial Intelligence for Quality Control), in the context of cloud detection through semantic segmentation. It consists of a database of 58 manually labeled Sentinel-2 spectra of clouds. The scenes are globally distributed and were acquired in 2016. The dataset originates from the Hollstein dataset, where the cloud masks were reclassified and converted into raster TIFF format. The new classes are the following: 0-clear, 1-thick cloud, 2-thin cloud, 3-cloud shadow. The cloud masks have varying sizes with 60m resolution. The original Hollstein dataset is available at https://git.gfz-potsdam.de/EnMAP/sentinel2_manual_classification_clouds.",
                 "originates_from":"hollstein",
                 "created":"2024-03-20",
@@ -3823,7 +3823,7 @@
             {
                 "type": "tds:AI_EOTrainingDataset",
                 "identifier":"pixbox-ai4qc",
-                "title": "PixBox-AI4QC dataset",
+                "title": "PixBox_AI4QC dataset",
                 "description":"The dataset was used in the AI4QC project (Atrificial Intelligence for Quality Control), in the context of cloud detection. It originates from the PixBox-S2-CMIX dataset, which was used as a validation reference within the first Cloud Masking Inter-comparison eXercise (CMIX) in 2019. The PixBox-S2-CMIX pixel collection was conducted already in 2018. The PixBox_AI4QC dataset was derived from this PixBox dataset, where the cloud masks were reclassified and rasterized to TIFF files. The new classes are the following: 0-clear, 1-thick cloud, 2-thin cloud, 3-cloud shadow. The dataset contains 29 scenes, which are spatially, temporally (year 2018), and thematically well distributed. The cloud masks have varying sizes with 60m resolution. The original PixBox dataset is available at https://zenodo.org/records/5036991.",
                 "originates_from":"pixbox",
                 "created":"2024-04-16",
@@ -4124,7 +4124,7 @@
             {
                 "type": "tds:AI_EOTrainingDataset",
                 "identifier":"kappaset-ai4qc",
-                "title": "KappaSet-AI4QC dataset",
+                "title": "KappaSet_AI4QC dataset",
                 "description":"The dataset was used in the AI4QC project (Artificial Intelligence for Quality Control), in the context of semantic segmentation for cloud detection. It consists of 9251 cloud masks, distributed over the full globe and acquired over the four seasons of 2020. To each label file is associated a Sentinel-2 L1C image. The dataset originates from the KappaSet dataset, where the cloud masks were reclassified. The new classes are the following: 0-clear, 1-thick cloud, 2-thin cloud, 3-cloud shadow. The cloud masks have a size of 512 x 512 pixels with 10m resolution. The original KappaSet data is available at https://zenodo.org/records/7100327#.Y-d7my_P02x.",
                 "originates_from":"kappaset",
                 "created":"2024-04-15",
